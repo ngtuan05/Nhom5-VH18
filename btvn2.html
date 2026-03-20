@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-5" style="max-width: 600px">
+      <!-- Form kiểm tra dữ liệu -->
+      <form onsubmit="return validate();" method="post">
+        <div id="msg"></div>
+
+        <div class="form-group">
+          <label>Nhập số:</label>
+          <input
+            type="text"
+            class="form-control mt-2 mb-2"
+            name="num1"
+            id="num1"
+          />
+        </div>
+
+        <div class="form-group mb-3">
+          <label>Lặp lại:</label>
+          <input
+            type="text"
+            class="form-control mt-2 mb-2"
+            name="num2"
+            id="num2"
+          />
+        </div>
+
+        <button type="reset" style="width: 200px" class="btn btn-success">
+          Làm lại
+        </button>
+
+        <input
+          type="submit"
+          style="width: 200px"
+          class="btn btn-primary"
+          value="Submit"
+        />
+      </form>
+    </div>
+
+    <script>
+      function validate() {
+        var n1 = document.getElementById("num1");
+        var n2 = document.getElementById("num2");
+
+        if (n1.value != "" && n2.value != "") {
+          if (n1.value == n2.value) {
+            return true;
+          }
+        }
+
+        alert("Dữ liệu không được để trống, không được giống nhau");
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

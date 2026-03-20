@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập Vinaphone</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h3 class="text-center mb-4">Đăng nhập Vinaphone</h3>
+
+        <form action="https://example.com/login" method="post">
+
+            <!-- Username -->
+            <div class="mb-3">
+                <label class="form-label">User Name</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <!-- Hidden fields -->
+            <input type="hidden" name="id" value="0">
+            <input type="hidden" name="language" value="vi">
+            <input type="hidden" name="service" value="sms">
+            <input type="hidden" name="network" value="vinaphone">
+
+            <!-- Submit -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">
+                    Đăng nhập
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

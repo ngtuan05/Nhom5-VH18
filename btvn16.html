@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form-group">
+            <label >mau nen</label>
+            <input type="text" class="form-control" id="mau nen"/>
+            <label >mau chu</label>
+            <input type="text" class="form-control" id="mau chu"/>
+            <label >tieu de</label>
+            <input type="text" class="form-control" id="tieu de"/>
+            <label >trang thai</label>
+            <input type="text" class="form-control" id="trang thai"/>
+
+        </form>
+        <button onclick="thaydoi()" class="btn btn-primary mt-3 " > thay đoi</button>
+        <script>
+            function thaydoi(){
+                document.body.style.backgroundColor= document.getElementById("mau nen").value
+                document.body.style.color = document.getElementById("mau chu").value
+                document.title=document.getElementById("tieu de").value
+                document.getElementById("button").innerHTML=document.getElementById("trang thai").value;
+            }
+        </script>
+    </div>
+</body>
+</html>

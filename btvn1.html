@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div id="msg"></div>
+        <div class="form-group">
+          <label>Username:</label>
+          <input type="text" class="form-control mt-2 mb-2" id="user" />
+        </div>
+        <div class="form-group" mb-3>
+          <label>Password:</label>
+          <input type="password" class="form-control mt-2 mb-2" id="pass" />
+        </div>
+        <button type="reset" style="width: 200px" class="btn btn-success">
+          Lam lai
+        </button>
+        <button
+          type="button"
+          onclick="dangnhap()"
+          style="width: 200px"
+          class="btn btn-primary"
+        >
+          Dang nhap
+        </button>
+      </form>
+    </div>
+    <script>
+      function dangnhap() {
+        let out = document.querySelector("#msg");
+        let u = document.querySelector("#user").value;
+        let p = document.querySelector("#pass").value;
+        if (u.toUpperCase() === "VAN" && p === "a123") {
+          out.innerHTML = `<h4 class = "alert alert-primary">Hello ${u}</h4>`;
+        } else {
+          out.innerHTML = `<h4 class = "alert alert-danger">Nhap sai! Nhap lai</h4>`;
+        }
+      }
+    </script>
+  </body>
+</html>
